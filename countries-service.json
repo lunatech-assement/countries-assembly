@@ -1,13 +1,14 @@
 {
 "service" : {
+  "serviceName": "country-service",
   "Type" : "AWS::ECS::Service",
   "DependsOn": ["Listener"],
   "Properties" : {
     "Role" : { "Ref" : "ECSServiceRole" },
-    "TaskDefinition" : { "Ref" : "taskdefinition" },
+    "TaskDefinition" : "countries",
     "DesiredCount" : "1",
     "LoadBalancers" : [{
-      "TargetGroupArn" : { "Ref" : "TargetGroup" },
+      "TargetGroupArn" : { "Ref" : "Lunat-Publi-Q5MWMQUU6ZB" },
       "ContainerPort" : "80",
       "ContainerName" : "countries"
     }],
