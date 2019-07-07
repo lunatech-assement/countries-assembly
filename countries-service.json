@@ -10,5 +10,5 @@
       }
   ],
   "desiredCount": 1,
-  "role": "ecs-service"
+  "role": "AWSServiceRoleForECS"
 }
