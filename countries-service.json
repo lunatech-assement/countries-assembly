@@ -4,7 +4,7 @@
   "taskDefinition": "countries",
   "loadBalancers": [
       {
-          "targetGroupArn": { "Ref" : "TargetGroup" },
+          "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:785345357562:targetgroup/LunatechAssessment-drop-1/b24495103b9559d9",
           "containerName": "countries",
           "containerPort": 8080
       }
