@@ -19,6 +19,12 @@ stage("Publish to Docker Hub") {
     img.push()
     } 
 }
+
+withAWS(credentials: 'aws-shahrukh', region: 'us-east-1') {
+    stage("Task definition") {
+    sh 'aws ecs register-task-definition --cli-input-json file://countries.json'
+    } 
+}
 }
    catch(err) {
         currentBuild.result = 'FAILED'

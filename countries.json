@@ -1,24 +1,23 @@
 {
-"taskDefinition": {
-    "volumes": [],
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:123456789012:task-definition/countries:1",
-    "containerDefinitions": [
-        {
-            "name": "countries",
-            "image": "shah1992/countries-assembly:1.0.2",
-            "cpu": 10,
-            "portMappings": [
-               {
-                    "containerPort": 5000,
-                    "hostPort": 80
-                }
-            ],
-            "memory": 256,
-            "essential": true
+    "taskDefinition": {
+        "volumes": [],
+        "taskDefinitionArn": "arn:aws:ecs:us-east-1:123456789012:task-definition/countries:1",
+        "containerDefinitions": [
+            {
+                "name": "countries",
+                "image": "shah1992/countries-assembly:1.0.2",
+                "cpu": 10,
+                "portMappings": [
+                   {
+                        "containerPort": 5000,
+                        "hostPort": 80
+                    }
+                ],
+                "memory": 256,
+                "essential": true
+            }
+        ],
+        "family": "countries",
+        "revision": 1
         }
-    ],
-    "family": "countries",
-    "revision": 1
 }
-}
-
