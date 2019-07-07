@@ -4,7 +4,7 @@
   "taskDefinition": "countries",
   "loadBalancers": [
       {
-          "targetGroupArn": { "Ref" : "TargetGroup" },
+          "targetGroupArn": {"Ref" : "TargetGroup"},
           "containerName": "countries",
           "containerPort": 8080
       }
