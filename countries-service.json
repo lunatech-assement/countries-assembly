@@ -1,18 +1,14 @@
 {
-"service" : {
+  "cluster": "LunatechAssessment-ECSCluster-1NQEV8PWU0YEQ",
   "serviceName": "country-service",
-  "Type" : "AWS::ECS::Service",
-  "DependsOn": ["Listener"],
-  "Properties" : {
-    "Role" : { "Ref" : "ECSServiceRole" },
-    "TaskDefinition" : "countries",
-    "DesiredCount" : "1",
-    "LoadBalancers" : [{
-      "TargetGroupArn" : { "Ref" : "Lunat-Publi-Q5MWMQUU6ZB" },
-      "ContainerPort" : "80",
-      "ContainerName" : "countries"
-    }],
-    "Cluster" : { "Ref" : "LunatechAssessment-ECSCluster-1NQEV8PWU0YEQ" }
-}
-}
+  "taskDefinition": "countries",
+  "loadBalancers": [
+      {
+          "targetGroupArn": "Lunat-Publi-Q5MWMQUU6ZB",
+          "containerName": "countries",
+          "containerPort": 8080
+      }
+  ],
+  "desiredCount": 1,
+  "role": "ecs-service"
 }
