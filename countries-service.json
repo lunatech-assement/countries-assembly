@@ -4,11 +4,11 @@
   "taskDefinition": "countries",
   "loadBalancers": [
       {
-          "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:785345357562:loadbalancer/app/Lunat-Publi-Q5MWMQUU6ZB/cd014ca9bbc7582a",
+          "targetGroupArn": "LunatechAssessment-drop-1",
           "containerName": "countries",
           "containerPort": 8080
       }
   ],
   "desiredCount": 1,
-  "role": "LunatechAssessment-ECSRole-1QMEZMAIQQ9OP"
-}
+  "role": "LunatechAssessment-EC2Role-DVJMHYJ4EK25"
+ }
