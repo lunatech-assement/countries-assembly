@@ -4,11 +4,11 @@
   "taskDefinition": "countries",
   "loadBalancers": [
       {
-          "targetGroupArn": "DummyTargetGroupPublic",
+          "targetGroupArn": "LunatechAssessment-drop-1",
           "containerName": "countries",
           "containerPort": 8080
       }
   ],
   "desiredCount": 1,
-  "role": "AWSServiceRoleForECS"
+  "role": "ecs-service"
 }
