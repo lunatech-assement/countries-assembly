@@ -10,5 +10,5 @@
       }
   ],
   "desiredCount": 1,
-  "role": "AWSServiceRoleForECS"
+  "role": "LunatechAssessment-ECSRole-1QMEZMAIQQ9OP"
 }
