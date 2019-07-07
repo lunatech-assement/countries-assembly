@@ -1,22 +1,30 @@
 {
-    "taskDefinition": {
-        "volumes": [],
-        "containerDefinitions": [
-            {
-                "name": "countries",
-                "image": "shah1992/countries-assembly:1.0.2",
-                "cpu": 10,
-                "portMappings": [
-                   {
-                        "containerPort": 5000,
-                        "hostPort": 80
-                    }
-                ],
-                "memory": 256,
-                "essential": true
-            }
-        ],
-        "family": "countries",
-        "revision": 1
+    "family": "countries",
+    "containerDefinitions": [
+        {
+            "name": "countries",
+            "image": "shah1992/countries-assembly:1.0.2",
+            "cpu": 10,
+            
+            
+            "links": [
+                ""
+            ],
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 8888,
+                    "protocol": "tcp"
+                }
+            ],
+            
+            "dependsOn": [
+                {
+                    "containerName": "countries",
+                    "condition": "START"
+                }
+            ]
+            
         }
+    ]
 }
