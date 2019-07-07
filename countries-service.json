@@ -4,6 +4,7 @@
   "taskDefinition": "countries",
   "loadBalancers": [
       {
+          "targetGroupArn": "Lunat-Publi-Q5MWMQUU6ZB",
           "containerName": "countries",
           "containerPort": 8080
       }
