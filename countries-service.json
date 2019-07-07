@@ -1,0 +1,14 @@
+{
+  "cluster": "LunatechAssessment-ECSCluster-1NQEV8PWU0YEQ",
+  "serviceName": "country-service",
+  "taskDefinition": "countries",
+  "loadBalancers": [
+      {
+          "targetGroupArn": "DummyTargetGroupPublic",
+          "containerName": "countries",
+          "containerPort": 8080
+      }
+  ],
+  "desiredCount": 1,
+  "role": "AWSServiceRoleForECS"
+}
